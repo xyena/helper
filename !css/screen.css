@@ -1,0 +1,105 @@
+/* Stylesheet */
+/* This site borrows from the styling utilized by iPod Touch apps from the 2008 era, which attempted a similar goal as this site. */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,main,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+html {
+	background-color: #ddd;
+}
+#dexred {
+	background-color: #cc2222;
+	padding: 1em 0 1em 0;
+	box-shadow: inset 0 0 1em black;
+	border: .25em solid #dd3333;
+}
+header {
+	margin: 0 3em 1em 3em;
+	padding: .2em 0 .8em 0;
+	border: .25em solid #dd3333;
+	box-shadow: 0 .125em 1em rgba(0, 0, 0, .8);
+	background-color: #ffefef;
+}
+h1 {
+	font-size: 4em;
+	font-family: 'Neucha', serif;
+	text-align: center;
+	font-weight: bold;
+}
+.mainbox {
+	background-color: #888;
+	padding: 1em 2em 1em 2em;
+	margin: 0 1em 0 1em;
+}
+a:visited {
+	color: #0044ff;
+}
+.firstpg {
+	color: #ff0000;
+	font-family: 'Arial', sans-serif;
+	padding-bottom: .5em;
+}.firstpg:last-child {padding-bottom: 0;}
+#firstmenu {
+	
+}
+footer {
+	margin-top: 0;
+	padding: .25em;
+	border-top: .25em solid #444444;
+	background-color: #ddd;
+}
+#ftr {
+	font-size: .65em;
+}
+
+
+
+ol li {
+	color: blue;
+}
+
+
+
+
+.pkmn { /*trbl*/
+	display: flex;
+	margin-bottom: 1em;
+	border: 1px solid red;
+	padding: .2em;
+}
+
+.pk { /*the img created in the js*/
+	border: 1px solid #000;
+}
+
+#pokes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	
+	margin-top: 1em;
+}
+.specie {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.balls {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#switch {
+	margin-left: 1em;
+}
+
+
+
