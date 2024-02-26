@@ -10,6 +10,10 @@ function pad(num, size) {
 }
 
 function slapImg(pkmn, frm) {
+
+	//IMAGE LOADING DISABLED IN CURRENT BUILD.
+	return "";
+	
 	var upoint = "<img src=\"https://play.pokemonshowdown.com/sprites/gen5";
 	pkmn = pkmn.toLowerCase();
 	frm = frm.toLowerCase();
