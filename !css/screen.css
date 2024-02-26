@@ -56,50 +56,34 @@ footer {
 }
 
 
-
-ol li {
-	color: blue;
+ol { /*ol container contains multiple li elements*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1em 0 1em;
 }
-/* Tint images grayscale with: https://stackoverflow.com/questions/43938860/how-to-tint-image-with-css */
-
-
-
-.pkmn { /*trbl*/
+ol li {
 	display: flex;
 	margin-bottom: 1em;
 	border: 1px solid red;
 	padding: .2em;
 }
-
-.pk { /*the img created in the js*/
-	border: 1px solid #000;
+span.numbah {
+	font-size: .5em;
+}
+p.dexentry { /*font changes only*/
+	color: black;
+	line-height: .8em; /*ensure ♂ and ♀ characters do not oversize box height*/
 }
 
-#pokes {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	
-	margin-top: 1em;
-}
-.specie {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
+/* Tint images grayscale with: https://stackoverflow.com/questions/43938860/how-to-tint-image-with-css */
 
-.balls {
+
+
+.balls { /* unused? */
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
 }
-
-#switch {
-	margin-left: 1em;
-}
-
-
-
