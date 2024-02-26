@@ -14,14 +14,42 @@ function slapImg(pkmn, frm) {
 	pkmn = pkmn.toLowerCase();
 	frm = frm.toLowerCase();
 	
-	upoint += "/" + pkmn + ".png\" />";
-	if (frm="") {return upoint}
+	if (pkmn.includes(" ")==false) {
+		upoint += "/" + pkmn;
+	}
+	
+	if (frm==".") { //no form caught
+		if (pkmn.includes(" ")==true) { //paradox
+			return upoint + "/" + pkmn.substring(0,pkmn.indexOf(" ")) + pkmn.substring(pkmn.indexOf(" ")+1) + ".png\" />";
+		}
+		else { //not paradox
+			return upoint + ".png\" />";
+		}
+	}
 	else {
+		if (frm.includes("breed")==true) { //"blaze breed"
+			return upoint + "-paldea" + frm.substring(0,frm.indexOf("breed")-1) + ".png\" />"; //"blaze"
+		}
+		if (frm.includes("striped")==true) { //"blue-striped"
+			return upoint + frm.substring(0,frm.indexOf("-")) + frm.substring(frm.indexOf("-")+1) + ".png\" />"; //"bluestriped"
+		}
 		switch (frm) {
-			case "female":
+			case "female": //bascF, meowF, deedeeF
 				return upoint + "-f.png\" />";
+			case "alolan":
+				return upoint + "-alola.png\" />";
+			case "galarian":
+				return upoint + "-galar.png\" />";
+			case "hisuian":
+				return upoint + "-hisui.png\" />";
+			case "paldean":
+				return upoint + "-paldea.png\" />";
+			case "10%": //zyg
+				return upoint + "-10.png\" />";
 			default:
 				return upoint + "-" + frm + ".png\" />";
+			//worma, pumpk, gourge, midnight, dusk, lowkey, rapid, bloodmoon, maus, squawk, dudun, droopy, stretchy
+			//had to rename lowkey, rapid, maus, dudun
 		}
 	}
 }
@@ -32,7 +60,7 @@ async function spitTxt(file) {
 	document.getElementById("dexol").innerHTML = "Loading...";
 	
 	//TESTING ONLY
-	txt="Bulbasaur\nIvysaur\nVenusaur\nCharmander\nCharmeleon\nCharizard\nSquirtle\nWartortle\nBlastoise";
+	txt="Bulbasaur\nIvysaur\nVenusaur\nIron Valiant\nDudunsparce,Threesegment\nMaushold,Four\nCharizard";
 	
 	var completedHTML = "";
 	var looping = true;
@@ -41,28 +69,29 @@ async function spitTxt(file) {
 	while (looping==true) { //avoid using .split or .match on txt because it creates 1025 pointers in an array.
 		var position = txt.indexOf("\n");
 		if (position==-1){position=txt.length;looping=false;} //we are at the end if no newlines are detected. Prep to exit at the end of this loop
+		
+		var pd = pad(i+1,4);
+		
+		
 		if (txt.substring(0,2)!="//") { //if not a comment line
-			if (txt.substring(0,position).includes(",")==false) {
-				completedHTML += "<li><p class=\"dexentry\" id=\"de" + (i+1) + "\">";
-				completedHTML += slapImg(txt.substring(0,position),"");
-				completedHTML += "<span class=\"numbah\">" + pad(i+1,4) + ":</span> ";
-				completedHTML += txt.substring(0,position) + "</p></li>";
-				i++;
-			}
-			else { //it does contain a comma
-				var line = txt.substring(0,position).split(","); //split the current line
-				var j=0;
-				completedHTML += "<li><p class=\"dexentry\" id=\"de" + (i+1) + "\"><span class=\"numbah\">" + pad(i+1,4) + ":</span> " + line[0] + "</p></li>"; //do the first one normally
-				
-				for (j=1;j<line.length;j++) {
-					line[j];
-					completedHTML += "<li><p class=\"dexentry\" id=\"de" + (i+1+"&#") + (97+(j-1)) + "\;\"><span class=\"numbah\">" + pad(i+1,4) + "&#" + (97+(j-1)) + "\;:</span> " + line[0] + line[j] + "</p></li>";
+			var commasep = txt.substring(0,position).split(","); //if there is no comma, length=1 and commasep[0] is just <name> or <name,form> anyway. commasep[1] will be undefined.
+			
+			completedHTML += "<li class=\"dexentry\" id=\"de" + (i+1) + "\"><p>"; //id="de4" or id="de30". Add letter if a form is present later on
+			completedHTML += slapImg(commasep[0],".");
+			completedHTML += "<span class=\"numbah\">" + pd + ":</span> " + commasep[0] + "</p></li>"; //do the first one normally
+			
+			
+			if (commasep.length!=1) { //it does contain a comma; so loop until all forms after the comma are covered			
+				for (j=1;j<commasep.length;j++) {
+					commasep[j];
+					completedHTML += "<li class=\"dexentry\" id=\"de" + (i+1+"&#") + (97+(j-1)) + "\;\"><p>";
+					completedHTML += slapImg(commasep[0],commasep[j]);
+					completedHTML += "<span class=\"numbah\">" + pd + "&#" + (97+(j-1)) + "\;:</span> " + commasep[0] + commasep[j] + "</p></li>";
 				}
-				i++;
 			}
+			i++;
 		}
 		txt = txt.substring(position+1); //trims off what we just read
-		console.log(i + ": " + position);
 	}
 	document.getElementById("dexol").innerHTML = completedHTML;
 }

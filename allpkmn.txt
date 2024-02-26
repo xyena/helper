@@ -848,7 +848,7 @@ Cramorant
 Arrokuda
 Barraskewda
 Toxel
-Toxtricity,Low Key
+Toxtricity,Lowkey
 Sizzlipede
 Centiskorch
 Clobbopus
@@ -891,7 +891,7 @@ Zacian
 Zamazenta
 Eternatus
 Kubfu
-Urshifu,Rapid Strike
+Urshifu,Rapidstrike
 Zarude
 Regieleki
 Regidrago
@@ -924,7 +924,7 @@ Pawmi
 Pawmo
 Pawmot
 Tandemaus
-Maushold,Three
+Maushold,Four
 Fidough
 Dachsbun
 Smoliv
@@ -981,7 +981,7 @@ Tatsugiri,Droopy,Stretchy
 Annihilape
 Clodsire
 Farigiraf
-Dudunsparce,Three-Segment
+Dudunsparce,Threesegment
 Kingambit
 Great Tusk
 Scream Tail
