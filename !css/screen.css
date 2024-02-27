@@ -36,6 +36,7 @@ h1 {
 	border: .125em solid #222;
 	padding: 1em 2em 1em 2em;
 	margin: 0 1em 0 1em;
+	box-shadow: inset 0 0 1em black,inset 0 0 1em black;
 }
 /*
 a:visited {
@@ -59,18 +60,19 @@ ul#firstmenu {
 	border: .25em solid #222;
 	padding: .5em;
 	background-color: #990000;
+	box-shadow: inset 0 0 .5em black;
 }
 li.firstpg {
 	border: .125em solid #bbb;
-	border-bottom: 0;
 	background-color: #444;
-	font-family: 'Arial', sans-serif;
+	font-family: 'Courier';
+	font-weight: 600;
 	margin-bottom: .5em;
 	padding: .75em;
 	text-align: center;
+	box-shadow: 0 0 .1875em black,0 0 .1875em black,0 0 .1875em black;
 }
 li.firstpg:last-child {
-	border-bottom: .125em solid #bbb;
 	margin-bottom: 0;
 }
 li.firstpg a {
