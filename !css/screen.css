@@ -7,6 +7,8 @@
 */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,main,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 
+/* Styling for all pages */
+
 html {
 	background-color: #ddd;
 }
@@ -31,20 +33,15 @@ h1 {
 }
 .mainbox {
 	background-color: #888;
+	border: .125em solid #222;
 	padding: 1em 2em 1em 2em;
 	margin: 0 1em 0 1em;
 }
+/*
 a:visited {
-	color: #0044ff;
+	color: #00ffff;
 }
-.firstpg {
-	color: #ff0000;
-	font-family: 'Arial', sans-serif;
-	padding-bottom: .5em;
-}.firstpg:last-child {padding-bottom: 0;}
-#firstmenu {
-	
-}
+*/
 footer {
 	margin-top: 0;
 	padding: .25em;
@@ -54,6 +51,27 @@ footer {
 #ftr {
 	font-size: .65em;
 }
+
+
+
+/* Main page only */
+ul#firstmenu {
+	border: .25em solid #222;
+	padding: .5em;
+}
+li.firstpg {
+	font-family: 'Arial', sans-serif;
+	padding-bottom: .5em;
+	text-align: center;
+}li.firstpg:last-child {padding-bottom: 0;}
+li.firstpg a {
+	font-size: 2em;
+	text-decoration: none;
+	color: #ffff00;
+}
+
+
+/* Game page only */
 
 
 ol { /*ol container contains multiple li elements*/
@@ -73,17 +91,8 @@ span.numbah {
 	font-size: .5em;
 }
 p.dexentry { /*font changes only*/
-	color: black;
+	color: pink;
 	line-height: .8em; /*ensure ♂ and ♀ characters do not oversize box height*/
 }
 
 /* Tint images grayscale with: https://stackoverflow.com/questions/43938860/how-to-tint-image-with-css */
-
-
-
-.balls { /* unused? */
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: center;
-}

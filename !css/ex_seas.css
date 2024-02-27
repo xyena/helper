@@ -1,0 +1,240 @@
+/* Stylesheet for SEASGroup.com */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,main,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+/* Major second modular scale.
+.438, .390, .346, .308, .274, .243, .216, .192, .171, .152, .135, .120, .107, .094830829857057 */
+
+
+
+
+/* Styles */
+
+html,body {
+	overflow-x: hidden;
+}
+html {
+	background-color: #111;
+}
+
+header {
+	background: url('../!images/1st_2x2_HACs_dark.jpg');
+	background-size: cover;
+	padding: 0em 0.493em 0em 0.493em;
+	position: relative;
+	text-align: center;
+	max-height: 11.863em;
+}
+
+body {
+	background-color: #f8f8f8;
+	color: #111;
+}
+
+nav {
+	background-color: #800518;
+	box-shadow: -0.095em 0.171em 0.274em #000;
+	font-family: 'Roboto';
+	margin-left: 110%;
+	position: absolute;
+	top: 8%;
+	width: 16.891em;
+	transition: 500ms;
+	z-index: 10;
+}
+
+.navigLayer0 a, .navigLayer1 a {
+	background-color: #333;
+	border: 0.171em solid #777;
+	border-style: outset;
+	color: #d8d8d8;
+	display: block;
+	font-size: 1.125em;
+	margin-bottom: 0;
+	padding: 0.555em 0 0.555em 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+.navigLayer2 a {
+	background-color: #5f5f5f;
+	border: 0.171em solid #333;
+	border-style: inset;
+	color: #fff;
+	display: block;
+	font-size: 1.125em;
+	margin: 0 1.5em 0 1.5em;
+	padding: 0.555em 0 0.555em 0;
+	text-align: center;
+	text-decoration: none;
+}
+.navigLayer0 a:visited, .navigLayer1 a:visited {
+	color: #d8d8d8;
+}
+.navigLayer2 a:visited {
+	color: #fff;
+}
+
+h1 {
+	/* Reserved */
+}
+
+h2 {
+	color: #bf2735;
+	font-family: 'Orbitron';
+	font-size: 1.125em;
+	font-weight: 700;
+	letter-spacing: 0.095em;
+	line-height: 1.266em;
+	padding: 1em 1em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h3 {
+	color: #111;
+	font-family: 'Roboto';
+	font-size: 0.889em;
+	font-weight: 700;
+	letter-spacing: 0.095em;
+	line-height: 1em;
+	padding: 1em 1em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+p  {
+	font-family: 'Roboto';
+	font-size: 1.125em;
+	line-height: 1.424em;
+	padding: 0em 0.555em 1.602em;
+}
+
+.inline-ul {padding: 1em 1em 1em 2em;}
+.inline-li {
+	font-family: 'Roboto';
+	font-size: 1em;
+	line-height: 1.266em;
+	list-style: disc;
+	list-style-type: disc;
+	padding-bottom: 0.274em;
+}.inline-li:last-child {padding-bottom: 0;}
+
+blockquote {
+	background-color: #fff4e0;
+	border: solid 0.12em #000;
+	color: #000;
+	font-family: 'Courier New', monospace;
+	margin: 0.555em 0.555em 1.602em;
+	padding: 0.555em;
+}
+#fletcher {
+	line-height: 1.125em;
+	padding: 1em;
+}
+
+footer {
+	background-color: #333;
+	border-top: 0.12em solid #111;
+	color: #d8d8d8;
+	font-family: 'Roboto';
+	font-size: 0.702em;
+	line-height: 1.125em;
+	padding: 1em;
+	text-align: center;
+}
+
+.foot:last-child {
+	padding-top: 1em;
+}
+.headerlogo {
+	height: 55%;
+	width: 55%;
+	max-width: 11.863em;
+}
+.trademark {
+	font-size: 45%;
+	line-height: 0em;
+	position: relative;
+	text-transform: uppercase;
+	top: -0.9em;
+}
+/*a .trademark {
+	color: #ff0000;
+	text-decoration: none;
+} */
+.contactdiv {
+	font-size: 1.266em;
+	margin: 0 0 1.602em 0;
+	padding: 1em;
+	text-align: center;
+}
+.contactanchor {
+	color: #2755df;
+	font-family: 'Orbitron';
+}
+.contact-li {
+	font-family: 'Roboto';
+	font-size: 1.125em;
+	padding: 0.493em 1.602em 0.120em;
+} .contact-li:last-child {padding-bottom: 1.602em;}
+.phone[^=tel] {
+	color: #0090ff;
+}
+.nextp {
+	padding-top: 1.602em;
+}
+.expand ul {
+	overflow: hidden;
+	height: 0;
+	transition: 500ms;
+}
+.fig { /* The figure element itself. */
+	padding: 1em;
+}
+.fig img { /* The image inside the above element. */
+	width: 100%;
+}
+
+figcaption {
+	font-family: 'Roboto';
+	font-size: .889em;
+	font-style: italic;
+	text-align: center;
+}
+#hamcontainer {
+	margin: 0.493em 0.493em 0 0;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 0;
+}
+#ham {
+	cursor: pointer;
+	height: 5%;
+	width: 10%;
+}
+.nobotpad {padding-bottom: 0;}
+.largebotpad {padding-bottom: 5.202em;}
+.somebotpad {padding-bottom: 1.125em;}
+
+	/* JS Responses */
+	.mobile-nav-active {
+		margin-left: calc(100% - 16.891em);
+		transition: margin-left 500ms;
+	}
+	.expand .active4 {
+		height: calc(11.237em - 4px);
+		transition: 500ms;
+	}
+	.expand .active5 {
+		height: calc(14.046em - 5px);
+		transition: 500ms;
+	}
+
+		/* Media Queries */
+		
