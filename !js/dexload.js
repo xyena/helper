@@ -9,53 +9,8 @@ function pad(num, size) {
     return s.substr(s.length-size);
 }
 
-function slapImg(pkmn, frm) {
-
-	//IMAGE LOADING DISABLED IN CURRENT BUILD.
-	return "";
-	
-	var upoint = "<img src=\"https://play.pokemonshowdown.com/sprites/gen5";
-	pkmn = pkmn.toLowerCase();
-	frm = frm.toLowerCase();
-	
-	if (pkmn.includes(" ")==false) {
-		upoint += "/" + pkmn;
-	}
-	
-	if (frm==".") { //no form caught
-		if (pkmn.includes(" ")==true) { //paradox
-			return upoint + "/" + pkmn.substring(0,pkmn.indexOf(" ")) + pkmn.substring(pkmn.indexOf(" ")+1) + ".png\" />";
-		}
-		else { //not paradox
-			return upoint + ".png\" />";
-		}
-	}
-	else {
-		if (frm.includes("breed")==true) { //"blaze breed"
-			return upoint + "-paldea" + frm.substring(0,frm.indexOf("breed")-1) + ".png\" />"; //"blaze"
-		}
-		if (frm.includes("striped")==true) { //"blue-striped"
-			return upoint + frm.substring(0,frm.indexOf("-")) + frm.substring(frm.indexOf("-")+1) + ".png\" />"; //"bluestriped"
-		}
-		switch (frm) {
-			case "female": //bascF, meowF, deedeeF
-				return upoint + "-f.png\" />";
-			case "alolan":
-				return upoint + "-alola.png\" />";
-			case "galarian":
-				return upoint + "-galar.png\" />";
-			case "hisuian":
-				return upoint + "-hisui.png\" />";
-			case "paldean":
-				return upoint + "-paldea.png\" />";
-			case "10%": //zyg
-				return upoint + "-10.png\" />";
-			default:
-				return upoint + "-" + frm + ".png\" />";
-			//worma, pumpk, gourge, midnight, dusk, lowkey, rapid, bloodmoon, maus, squawk, dudun, droopy, stretchy
-			//had to rename lowkey, rapid, maus, dudun
-		}
-	}
+function slapImg() {
+	document.getElementById("dexol").innerHTML
 }
 
 async function spitTxt(file) {
@@ -100,3 +55,49 @@ async function spitTxt(file) {
 	document.getElementById("dexol").innerHTML = completedHTML;
 }
 
+//Currently not used, loading disabled in current build.
+function slapImgShwdn(pkmn, frm) {
+	
+	var upoint = "<img src=\"https://play.pokemonshowdown.com/sprites/gen5";
+	pkmn = pkmn.toLowerCase();
+	frm = frm.toLowerCase();
+	
+	if (pkmn.includes(" ")==false) {
+		upoint += "/" + pkmn;
+	}
+	
+	if (frm==".") { //no form caught
+		if (pkmn.includes(" ")==true) { //paradox
+			return upoint + "/" + pkmn.substring(0,pkmn.indexOf(" ")) + pkmn.substring(pkmn.indexOf(" ")+1) + ".png\" />";
+		}
+		else { //not paradox
+			return upoint + ".png\" />";
+		}
+	}
+	else {
+		if (frm.includes("breed")==true) { //"blaze breed"
+			return upoint + "-paldea" + frm.substring(0,frm.indexOf("breed")-1) + ".png\" />"; //"blaze"
+		}
+		if (frm.includes("striped")==true) { //"blue-striped"
+			return upoint + frm.substring(0,frm.indexOf("-")) + frm.substring(frm.indexOf("-")+1) + ".png\" />"; //"bluestriped"
+		}
+		switch (frm) {
+			case "female": //bascF, meowF, deedeeF
+				return upoint + "-f.png\" />";
+			case "alolan":
+				return upoint + "-alola.png\" />";
+			case "galarian":
+				return upoint + "-galar.png\" />";
+			case "hisuian":
+				return upoint + "-hisui.png\" />";
+			case "paldean":
+				return upoint + "-paldea.png\" />";
+			case "10%": //zyg
+				return upoint + "-10.png\" />";
+			default:
+				return upoint + "-" + frm + ".png\" />";
+			//worma, pumpk, gourge, midnight, dusk, lowkey, rapid, bloodmoon, maus, squawk, dudun, droopy, stretchy
+			//had to rename lowkey, rapid, maus, dudun
+		}
+	}
+}
