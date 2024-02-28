@@ -17,9 +17,76 @@
 	  </header>
 
       <main class="mainbox">
-	    <ul class="gamelist">
-		  <!--JS inserts games here, from stored cookies-->
-		  <li>Add a game</li>
+		<div class="gamebarone">
+			<a href="#" onclick="return gamePopup()">
+				<div class="gamebartwo">
+					<h2>Add a game</h2>
+				</div>
+			</a>
+		</div>
+		<div id="popup">
+			<div class="popupgrouping">
+				<label for="gamechoice">Game type:</label>
+				<select id="gamechoice">
+				  <option value="blank">&mdash;select&mdash;</option>
+				  <option value="gRuby">1. Ruby</option>
+				  <option value="gSapp">2. Sapphire</option>
+				  <option value="gColo">3. Colosseum</option>
+				  <option value="gFiRe">4. FireRed</option>
+				  <option value="gLeGr">5. LeafGreen</option>
+				  <option value="gEmer">6. Emerald</option>
+				  <option value="gGale">7. XD: Gale of Darkness</option>
+				  <option value="gDiam">8. Diamond</option>
+				  <option value="gPear">9. Pearl</option>
+				  <option value="gPlat">10. Platinum</option>
+				  <option value="gHeGo">11. HeartGold</option>
+				  <option value="gSoSi">12. SoulSilver</option>
+				  <option value="gB1">13. Black</option>
+				  <option value="gW1">14. White</option>
+				  <option value="gB2">15. Black 2</option>
+				  <option value="gW2">16. White 2</option>
+				  <option value="gEcks">17. X</option>
+				  <option value="gWhy">18. Y</option>
+				  <option value="gOmeg">19. Omega Ruby</option>
+				  <option value="gAlph">20. Alpha Sapphire</option>
+				  <option value="gVCR">21. VC Red</option>
+				  <option value="gVCB">22. VC Blue</option>
+				  <option value="gVCY">23. VC Yellow</option>
+				  <option value="gGo">24. GO</option>
+				  <option value="gSun">25. Sun</option>
+				  <option value="gMoon">26. Moon</option>
+				  <option value="gVCG">27. VC Gold</option>
+				  <option value="gVCS">28. VC Silver</option>
+				  <option value="gUS">29. Ultra Sun</option>
+				  <option value="gUM">30. Ultra Moon</option>
+				  <option value="gVCC">31. VC Crystal</option>
+				  <option value="gLGP">32. Let's Go: Pikachu</option>
+				  <option value="gLGE">33. Let's Go: Eevee</option>
+				  <option value="gSwor">34. Sword</option>
+				  <option value="gShie">35. Shield</option>
+				  <option value="gHome">36. HOME</option>
+				  <option value="gPLA">37. Legends: Arceus</option>
+				  <option value="gScar">38. Scarlet</option>
+				  <option value="gViol">39. Violet</option>
+				</select>
+			</div>
+			<div class="popupgrouping">
+				<label for="OTname">Trainer name:</label>
+				<input type="text"id="OTname"placeholder="John">
+			</div>
+			<div class="popupgrouping">
+				<label for="OTid">Trainer ID:</label>
+				<input type="text"id="OTid"maxlength="6"placeholder="000000"> <!--type="number" is not the same on all browsers. Better to just limit to a text.-->
+			</div>
+			<div class="popupgrouping">
+				<label for="gamenotes">Notes:</label>
+				<textarea type="text"id="gamenotes"placeholder="(optional)"></textarea>
+			</div>
+			<input id="popupsubmit"type="submit"onclick="return storeGame()">
+		</div>
+		<ul class="gamelist">
+			<!--JS inserts games here, from stored cookies-->
+			<li></li>
 		</ul>
 	  </main>
 	</div>
