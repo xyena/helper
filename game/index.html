@@ -9,7 +9,7 @@
     <link rel="stylesheet" media="screen" href="../!css/screen.css" />
     <title>PokéHelper</title>
   </head>
-  <body>
+  <body class="pgGame">
     <div id="dexred">
 	  <header>
 		<!--Fixed banner goes here-->
@@ -72,22 +72,23 @@
 			</div>
 			<div class="popupgrouping">
 				<label for="OTname">Trainer name:</label>
-				<input type="text"id="OTname"placeholder="John">
+				<input type="text"id="OTname"maxlength="20"placeholder="John">
 			</div>
 			<div class="popupgrouping">
 				<label for="OTid">Trainer ID:</label>
-				<input type="text"id="OTid"maxlength="6"placeholder="000000"> <!--type="number" is not the same on all browsers. Better to just limit to a text.-->
+				<input type="number"id="OTid"maxlength="6"placeholder="000000"> <!--Still sanitize in JS; eventually, 03333 should write 03333 onto the page, not 3333-->
 			</div>
 			<div class="popupgrouping">
 				<label for="gamenotes">Notes:</label>
 				<textarea type="text"id="gamenotes"placeholder="(optional)"></textarea>
 			</div>
-			<input id="popupsubmit"type="submit"onclick="return storeGame()">
+			<input id="popupsubmit"type="submit"onclick="return storeGame()"value="Add">
 		</div>
-		<ul class="gamelist">
+		<ul class="gamelist"id="gamelist">
 			<!--JS inserts games here, from stored cookies-->
 			<li></li>
 		</ul>
+		<!--		onclick="return confirm('Press OK to delete all stored games.\nPress Cancel to cancel.');"		-->
 	  </main>
 	</div>
 	

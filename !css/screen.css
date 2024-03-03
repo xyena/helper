@@ -104,10 +104,62 @@ h2 {
 }
 ul.gamelist {
 	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 ul.gamelist li {
-	
+	color: black;
 }
+ul.ulGame {
+	margin: 1em;
+	padding: .5em;
+}
+ul.ulGame li {
+	color: black;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+ul.gRuby {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gSapp {background-color: #1155aa;border: .25em solid #1166cc;}
+ul.gColo {background-color: #220f40;border: .25em solid #cc3300;}ul.gColo li {color:#eeeeee;}
+ul.gFiRe {background-color: #cc3322;border: .25em solid #bb2222;}
+ul.gLeGr {background-color: #33cc22;border: .25em solid #22bb22;}
+ul.gEmer {background-color: #119933;border: .25em solid #007711;}
+ul.gGale {background-color: #331166;border: .25em solid #bbbbcc;}ul.gGale li {color:#eeeeee;}
+ul.gDiam {background-color: #405080;border: .25em solid #c0e0e0;}
+ul.gPear {background-color: #e0d0d0;border: .25em solid #a070a0;}
+ul.gPlat {background-color: #dddddd;border: .25em solid #ee3333;}
+ul.gHeGo {background-color: #ff5020;border: .25em solid #d09030;}
+ul.gSoSi {background-color: #99ccff;border: .25em solid #eeeeee;}
+ul.gB1 {background-color: #111111;border: .25em solid #999999;}ul.gB1 li {color:#eeeeee;}
+ul.gW1 {background-color: #eeeeee;border: .25em solid #999999;}
+ul.gB2 {background-color: #111111;border: .25em solid #99ccff;}ul.gB2 li {color:#eeeeee;}
+ul.gW2 {background-color: #eeeeee;border: .25em solid #ee4400;}
+ul.gEcks {background-color: #7080c0;border: .25em solid #f0f0c0;}
+ul.gWhy {background-color: #334040;border: .25em solid #ee4030;}ul.gWhy li {color:#eeeeee;}
+ul.gOmeg {background-color: #ee0000;border: .25em solid #f0f0c0;}
+ul.gAlph {background-color: #2030c0;border: .25em solid #f0f0c0;}
+ul.gVCR {background-color: #dd0000;border: .25em solid #f00000;}
+ul.gVCB {background-color: #0033cc;border: .25em solid #0044f0;}
+ul.gVCY {background-color: #aaaa00;border: .25em solid #f0f000;}
+ul.gGo {background-color: #eeeeee;border: .25em solid #cccc00;}ul.gGo li {color:#002299;}
+ul.gSun {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gMoon {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gVCG {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gVCS {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gUS {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gUM {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gVCC {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gLGP {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gLGE {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gSwor {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gShie {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gHome {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gPLA {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gScar {background-color: #aa1111;border: .25em solid #cc1111;}
+ul.gViol {background-color: #5500dd;border: .25em solid #dddd00;}
+
 div#popup {
 	display: none;
 	background-color: #9999bb;
