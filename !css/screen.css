@@ -103,62 +103,112 @@ h2 {
 	display: inline-block;
 }
 ul.gamelist {
+	margin-top: .5em;
 	background-color: black;
+	border: .25em solid #cccccc;
+	border-style: outset;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	padding: .5em;
 }
 ul.gamelist li {
 	color: black;
 }
 ul.ulGame {
-	margin: 1em;
-	padding: .5em;
-}
+	background-position: 140% 50%;
+	background-repeat: no-repeat;
+	border: .25em solid #ffffff; /*this will be overwritten*/
+	border-style: ridge;
+	padding: .25em;
+	width: 10.5em;
+	height: 4em;
+	margin-bottom: .5em;
+	overflow-y: scroll;
+}ul.ulGame:last-child{margin-bottom: 0;}
+/* media query > 1515px; width: 10%; */
 ul.ulGame li {
 	color: black;
-	font-family: sans-serif;
-	font-weight: bold;
+	font-family: 'Comic Sans MS',sans-serif;
 }
-ul.gRuby {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gSapp {background-color: #1155aa;border: .25em solid #1166cc;}
-ul.gColo {background-color: #220f40;border: .25em solid #cc3300;}ul.gColo li {color:#eeeeee;}
-ul.gFiRe {background-color: #cc3322;border: .25em solid #bb2222;}
-ul.gLeGr {background-color: #33cc22;border: .25em solid #22bb22;}
-ul.gEmer {background-color: #119933;border: .25em solid #007711;}
-ul.gGale {background-color: #331166;border: .25em solid #bbbbcc;}ul.gGale li {color:#eeeeee;}
-ul.gDiam {background-color: #405080;border: .25em solid #c0e0e0;}
-ul.gPear {background-color: #e0d0d0;border: .25em solid #a070a0;}
-ul.gPlat {background-color: #dddddd;border: .25em solid #ee3333;}
-ul.gHeGo {background-color: #ff5020;border: .25em solid #d09030;}
-ul.gSoSi {background-color: #99ccff;border: .25em solid #eeeeee;}
-ul.gB1 {background-color: #111111;border: .25em solid #999999;}ul.gB1 li {color:#eeeeee;}
-ul.gW1 {background-color: #eeeeee;border: .25em solid #999999;}
-ul.gB2 {background-color: #111111;border: .25em solid #99ccff;}ul.gB2 li {color:#eeeeee;}
-ul.gW2 {background-color: #eeeeee;border: .25em solid #ee4400;}
-ul.gEcks {background-color: #7080c0;border: .25em solid #f0f0c0;}
-ul.gWhy {background-color: #334040;border: .25em solid #ee4030;}ul.gWhy li {color:#eeeeee;}
-ul.gOmeg {background-color: #ee0000;border: .25em solid #f0f0c0;}
-ul.gAlph {background-color: #2030c0;border: .25em solid #f0f0c0;}
-ul.gVCR {background-color: #dd0000;border: .25em solid #f00000;}
-ul.gVCB {background-color: #0033cc;border: .25em solid #0044f0;}
-ul.gVCY {background-color: #aaaa00;border: .25em solid #f0f000;}
-ul.gGo {background-color: #eeeeee;border: .25em solid #cccc00;}ul.gGo li {color:#002299;}
-ul.gSun {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gMoon {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gVCG {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gVCS {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gUS {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gUM {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gVCC {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gLGP {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gLGE {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gSwor {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gShie {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gHome {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gPLA {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gScar {background-color: #aa1111;border: .25em solid #cc1111;}
-ul.gViol {background-color: #5500dd;border: .25em solid #dddd00;}
+ul.gRuby {background-color: #aa1111;border-color: #cc1111;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(255,0,0,.8)), url('https://play.pokemonshowdown.com/sprites/gen5/groudon.png');}
+ul.gSapp {background-color: #1155aa;border-color: #002288;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,255,.8)), url('https://play.pokemonshowdown.com/sprites/gen5/kyogre.png');}
+ul.gColo {background-color: #220f40;border-color: #cc3300;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.3)), url('https://play.pokemonshowdown.com/sprites/gen5/celebi.png');}ul.gColo li {color:#eeeeee;}
+ul.gFiRe {background-color: #cc3322;border-color: #bb2222;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(255,175,99,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/charizard.png');}
+ul.gLeGr {background-color: #33cc22;border-color: #119911;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(150,255,0,.7)), url('https://play.pokemonshowdown.com/sprites/gen5/venusaur.png');}
+ul.gEmer {background-color: #119933;border-color: #007711;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,150,99,.6)), url('https://play.pokemonshowdown.com/sprites/gen5/rayquaza.png');}
+ul.gGale {background-color: #331166;border-color: #bbbbcc;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://www.serebii.net/xd/pokemon/249.png');background-position: 110% 50%;}ul.gGale li {color:#eeeeee;}
+ul.gDiam {background-color: #405080;border-color: #c0e0e0;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/dialga.png');}ul.gDiam li {color:#cccccc;}
+ul.gPear {background-color: #e0d0d0;border-color: #a070a0;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/palkia.png');}
+ul.gPlat {background-color: #dddddd;border-color: #ee3333;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/giratina.png');}
+ul.gHeGo {background-color: #ff5020;border-color: #d09030;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/hooh.png');}
+ul.gSoSi {background-color: #99ccff;border-color: #eeeeee;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/lugia.png');}
+ul.gB1 {background-color: #111111;border-color: #999999;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/reshiram.png');}ul.gB1 li {color:#eeeeee;}
+ul.gW1 {background-color: #eeeeee;border-color: #999999;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/zekrom.png');}
+ul.gB2 {background-color: #111111;border-color: #99ccff;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/kyurem-black.png');}ul.gB2 li {color:#eeeeee;}
+ul.gW2 {background-color: #eeeeee;border-color: #ee4400;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/kyurem-white.png');}
+ul.gEcks {background-color: #7080c0;border-color: #f0f0c0;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/xerneas.png');}
+ul.gWhy {background-color: #334040;border-color: #ee4030;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/yveltal.png');}ul.gWhy li {color:#eeeeee;}
+ul.gOmeg {background-color: #ee0000;border-color: #f0f0c0;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/groudon-primal.png');}
+ul.gAlph {background-color: #2030c0;border-color: #f0f0c0;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/kyogre-primal.png');}
+ul.gVCR {background-color: #dd0000;border-color: #f00000;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.2)), url('https://www.serebii.net/pokearth/sprites/rb/006.png');background-position: 110% 50%;}
+ul.gVCB {background-color: #0033cc;border-color: #0044f0;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.2)), url('https://www.serebii.net/pokearth/sprites/rb/009.png');background-position: 110% 50%;}
+ul.gVCY {background-color: #dddd00;border-color: #f0f000;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.2)), url('https://www.serebii.net/pokearth/sprites/yellow/025.png');background-position: 110% 50%;}
+ul.gGo {background-color: #eeeeee;border-color: #cccc00;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/meltan.png');}ul.gGo li {color:#002299;}
+ul.gSun {background-color: #bb0022;border-color: #ffaa33;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/solgaleo.png');}ul.gSun li {color:#ffddbb;}
+ul.gMoon {background-color: #4400ff;border-color: #4499ff;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/lunala.png');}ul.gMoon li {color:#bbddff;}
+ul.gVCG {background-color: #ae944a;border-color: #ceb46a;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.2)), url('https://www.serebii.net/pokearth/sprites/gold/250.png');background-position: 110% 50%;}
+ul.gVCS {background-color: #8a8a8a;border-color: #9a9a9a;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.2)), url('https://www.serebii.net/pokearth/sprites/silver/249.png');background-position: 110% 50%;}
+ul.gUS {background-color: #bb0022;border-color: #ffaa33;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/necrozma-duskmane.png');}ul.gUS li {color:#ffddbb;}
+ul.gUM {background-color: #4400ff;border-color: #4499ff;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/necrozma-dawnwings.png');}ul.gUM li {color:#bbddff;}
+ul.gVCC {background-color: #70a0b0;border-color: #90c0d0;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.2)), url('https://www.serebii.net/pokearth/sprites/crystal/245.png');background-position: 110% 50%;}
+ul.gLGP {background-color: #ffff55;border-color: #ffff55;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/pikachu-partner.png');}
+ul.gLGE {background-color: #cc8844;border-color: #cc8844;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/eevee-starter.png');}
+ul.gSwor {background-color: #0044ff;border-color: #eeeeee;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/zacian.png');}ul.gSwor li {color:#000066;text-shadow: 0 0 .125em #ffffff,0 0 .125em #ffffff,0 0 .125em #ffffff;}
+ul.gShie {background-color: #ff0044;border-color: #eeeeee;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.5)), url('https://play.pokemonshowdown.com/sprites/gen5/zamazenta.png');}ul.gShie li {color:#660000;text-shadow: 0 0 .125em #ffffff,0 0 .125em #ffffff,0 0 .125em #ffffff;}
+ul.gHome {background-color: #d0ffd0;border-color: #eeeeee;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(0,255,125,.5))}ul.gHome li {color:#006655;}
+ul.gPLA {background-color: #224466;border-color: #bb0000;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(255,99,0,.3)), url('https://play.pokemonshowdown.com/sprites/gen5/arceus.png');}ul.gPLA li {text-shadow: 0 0 .125em #ffffff,0 0 .125em #ffffff,0 0 .125em #ffffff;}
+ul.gScar {background-color: #aa1111;border-color: #dddd00;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(255,99,0,.3)), url('https://play.pokemonshowdown.com/sprites/gen5/koraidon.png');}ul.gScar li {color:#eeeeee;}
+ul.gViol {background-color: #5500dd;border-color: #dddd00;
+background-image:linear-gradient(rgba(255,255,255,0), rgba(255,255,0,.3)), url('https://play.pokemonshowdown.com/sprites/gen5/miraidon.png');}ul.gViol li {color:#eeeeee;}
 
 div#popup {
 	display: none;

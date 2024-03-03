@@ -22,7 +22,7 @@ async function toomanycooks() {
 			
 			completedHTML += "<ul class=\"ulGame "+temp+"\">"; //add a new game container. ex., <ul class="ulGame gSapp">
 			
-			completedHTML += "<li class=\"liGame\">" + "Game: " + gameMatch(temp) + "</li>";
+			completedHTML += "<li class=\"liGame\">" + gameMatch(temp) + "</li>";
 			fortune = fortune.substring(fortune.indexOf(";")+2,fortune.length); //advance through one space and one semicolon
 			
 			completedHTML += "<li class=\"liOT\">" + "Trainer: " + fortune.substring(7+(i+"").length,fortune.indexOf(";")) + "</li>";
