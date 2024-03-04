@@ -61,6 +61,10 @@ function gamePopup() {
 	return;
 }
 function storeGame() {
+	if (document.getElementById("gamechoice").value=="blank") { //there are cleaner ways of doing this
+		alert("Please choose a game.");
+		return;
+	}
 	if (document.getElementById("OTname").value.includes(";")==true) {
 		alert("OT Name cannot contain a semicolon.");
 		return;
@@ -88,6 +92,8 @@ function storeGame() {
 	document.cookie="OTname"+i+"="+document.getElementById("OTname").value+";";
 	document.cookie="OTid"+i+"="+document.getElementById("OTid").value+";";
 	document.cookie="gamenotes"+i+"="+document.getElementById("gamenotes").value;
+	
+	toomanycooks(); //reload list
 }
 function sanitize(string) { //https://stackoverflow.com/questions/2794137/sanitizing-user-input-before-adding-it-to-the-dom-in-javascript
   const map = {
